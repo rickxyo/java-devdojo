@@ -52,7 +52,35 @@ double divisao = 10.0 / 3.0;
 
 Operadores Relacionais e Lógicos:
 
-```
+```java
 boolean maior = 10 > 5; // true
 boolean condicao = (10 > 5) && (5 < 3); // false
+```
+
+### 4. Estruturas Condicionais
+
+Uso de If-Else:
+
+```java
+if (idade >= 18) {
+    System.out.println("Maior de idade");
+} else {
+    System.out.println("Menor de idade");
+}
+```
+
+Switch-Case:
+
+```java
+int dia = 3;
+switch (dia) {
+    case 1:
+         System.out.println("Segunda-feira");
+         break;
+    case 2:
+         System.out.println("Terça-feira");
+         break;
+    default:
+         System.out.println("Outro dia");
+}
 ```
