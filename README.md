@@ -124,6 +124,9 @@ Explicação:
 
 ### 6. Arrays
 
+O que é um Array?<br>
+Uma estrutura de dados que armazena uma coleção de elementos do mesmo tipo, com tamanho fixo.
+
 Declaração e Inicialização:
 
 ```java
@@ -138,4 +141,45 @@ Iteração:
 for (int i = 0; i < outrosNumeros.length; i++) {
     System.out.println(outrosNumeros[i]);
 }
+```
+
+### 7. Métodos
+
+
+Definição e Uso:<br>
+Métodos são blocos de código que executam uma tarefa específica e podem ser reutilizados.
+
+Declaração de um Método:
+
+```java
+public static void saudacao() {
+    System.out.println("Olá, mundo!");
+}
+```
+
+Chamando um Método:
+
+```
+saudacao(); // Executa o método
+```
+
+Métodos com Parâmetros:
+
+```java
+public static void soma(int a, int b) {
+    System.out.println("Resultado: " + (a + b));
+}
+
+soma(5, 3); // Chama o método com os argumentos 5 e 3
+```
+
+Métodos com Retorno:
+
+```java
+public static int multiplicar(int a, int b) {
+    return a * b;
+}
+
+int resultado = multiplicar(4, 5);
+System.out.println(resultado); // Imprime 20
 ```
