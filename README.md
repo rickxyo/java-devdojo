@@ -119,8 +119,8 @@ Usado quando não é necessário acessar os índices dos elementos.
 
 Explicação:
 
-* **int num** Representa cada elemento da coleção ou array. <br>
-* **numeros:** Itera por todos os elementos do array numeros.
+* `int num` Representa cada elemento da coleção ou array. <br>
+* `numeros:` Itera por todos os elementos do array numeros.
 
 ### 6. Arrays
 
@@ -249,3 +249,60 @@ public class Carro {
     }
 }
 ```
+
+### 11. Encapsulamento
+**O que é Encapsulamento?**<br>
+Prática de proteger os dados de uma classe e permitir o acesso controlado através de métodos.
+
+Modificadores de Acesso:
+
+* `private:` Acesso permitido apenas dentro da própria classe.<br>
+* `public:` Acesso permitido de qualquer lugar.<br>
+* `protected:` Acesso permitido na mesma classe, pacote ou subclasses.<br>
+
+Exemplo de Encapsulamento:
+
+```java
+public class Pessoa {
+    private String nome;
+
+    // Método Getter
+    public String getNome() {
+        return nome;
+    }
+
+    // Método Setter
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+}
+```
+
+Uso do Getter e Setter:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+       Pessoa pessoa = new Pessoa();
+       pessoa.setNome("João");
+       System.out.println(pessoa.getNome()); // João
+    }
+}
+```
+
+### O que são Getters e Setters?
+Getters e Setters são métodos usados para acessar (get) e modificar (set) os valores de atributos privados de uma classe. Eles são fundamentais para implementar o encapsulamento em Java, garantindo controle sobre como os atributos de uma classe são acessados ou alterados.
+
+**Por que usar Getters e Setters?<br>**
+
+**Encapsulamento:**<br>
+Protege os atributos, permitindo acesso controlado.
+Restringe modificações diretas, garantindo consistência no estado do objeto.
+
+**Validação e Controle:**<br>
+Os Setters permitem adicionar validações antes de modificar um atributo.
+Exemplo: Impedir que um atributo receba valores inválidos, 
+
+**Flexibilidade:**<br>
+Getters e Setters podem ser personalizados sem alterar o nome do atributo.
+A lógica de acesso/modificação pode mudar sem afetar o restante do código.
