@@ -84,3 +84,41 @@ switch (dia) {
          System.out.println("Outro dia");
 }
 ```
+
+### 5. Laços de Repetição
+
+For:
+
+```java
+for (int i = 0; i < 5; i++) {
+    System.out.println("Número: " + i);
+}
+```
+
+While:
+
+```java
+int contador = 0;
+while (contador < 5) {
+     System.out.println("Contador: " + contador);
+     contador++;
+}
+```
+
+For-Each:
+
+```java
+int[] numeros = {1, 2, 3, 4, 5};
+for (int num : numeros) {
+    System.out.println("Número: " + num);
+}
+```
+
+forma simplificada de iterar sobre elementos de arrays ou coleções.
+Usado quando não é necessário acessar os índices dos elementos.
+
+Explicação:
+
+* **int num** Representa cada elemento da coleção ou array. <br>
+* **numeros:** Itera por todos os elementos do array numeros.
+
