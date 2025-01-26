@@ -196,3 +196,31 @@ Conceitos Principais:
 * **Encapsulamento:** Controle do acesso aos atributos e métodos.<br>
 * **Herança:** Reutilização de código entre classes.<br>
 * **Polimorfismo:** Capacidade de um objeto se comportar de várias formas.<br>
+
+### 9. Classes e Objetos
+
+   Criando uma classe: 
+
+```java
+public class Carro {
+    modelo;
+    int ano;
+
+     public void exibirDetalhes() {
+         System.out.println("Modelo: " + modelo + ", Ano: " + ano);
+     }
+}
+```
+
+Criando um Objeto:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Carro carro = new Carro();
+        carro.modelo = "Fusca";
+        carro.ano = 1969;
+        carro.exibirDetalhes(); // Modelo: Fusca, Ano: 1969
+    }
+}
+```
