@@ -122,3 +122,20 @@ Explicação:
 * **int num** Representa cada elemento da coleção ou array. <br>
 * **numeros:** Itera por todos os elementos do array numeros.
 
+### 6. Arrays
+
+Declaração e Inicialização:
+
+```java
+int[] numeros = new int[5];
+numeros[0] = 10;
+int[] outrosNumeros = {1, 2, 3, 4, 5};
+```
+
+Iteração:
+
+```java
+for (int i = 0; i < outrosNumeros.length; i++) {
+    System.out.println(outrosNumeros[i]);
+}
+```
