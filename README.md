@@ -124,7 +124,7 @@ Explicação:
 
 ### 6. Arrays
 
-O que é um Array?<br>
+**O que é um Array?**<br>
 Uma estrutura de dados que armazena uma coleção de elementos do mesmo tipo, com tamanho fixo.
 
 Declaração e Inicialização:
@@ -203,7 +203,7 @@ Conceitos Principais:
 
 ```java
 public class Carro {
-    modelo;
+    String modelo;
     int ano;
 
      public void exibirDetalhes() {
@@ -221,6 +221,31 @@ public class Main {
         carro.modelo = "Fusca";
         carro.ano = 1969;
         carro.exibirDetalhes(); // Modelo: Fusca, Ano: 1969
+    }
+}
+```
+
+### 10. Construtores
+
+**O que é um Construtor?**<br>
+Método especial chamado quando um objeto é criado, usado para inicializar atributos.
+
+Definindo um Construtor:
+
+```java
+public class Carro {
+    String modelo;
+    int ano;
+
+
+    // Construtor
+    public Carro(String modelo, int ano) {
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+
+    public void exibirDetalhes() {
+        System.out.println("Modelo: " + modelo + ", Ano: " + ano);
     }
 }
 ```
