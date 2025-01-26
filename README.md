@@ -39,3 +39,20 @@ Conversão de Tipos:
 double numero = 9.5;
 int inteiro = (int) numero; // Conversão explícita (casting)
 ```
+
+### 3. Operadores
+
+Exemplo de Operadores Aritméticos:
+
+```java
+int soma = 10 + 5;
+int multiplicacao = 10 * 5;
+double divisao = 10.0 / 3.0;
+```
+
+Operadores Relacionais e Lógicos:
+
+```
+boolean maior = 10 > 5; // true
+boolean condicao = (10 > 5) && (5 < 3); // false
+```
