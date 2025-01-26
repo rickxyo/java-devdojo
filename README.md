@@ -183,3 +183,16 @@ public static int multiplicar(int a, int b) {
 int resultado = multiplicar(4, 5);
 System.out.println(resultado); // Imprime 20
 ```
+
+## 8. Orientação a Objetos (OO)
+
+**O que é Orientação a Objetos?**<br>
+Paradigma que organiza o código em torno de objetos, que possuem atributos (dados) e métodos (comportamentos).
+
+Conceitos Principais:
+
+* **Classe:** Modelo ou estrutura para criar objetos.<br>
+* **Objeto:** Instância de uma classe.<br>
+* **Encapsulamento:** Controle do acesso aos atributos e métodos.<br>
+* **Herança:** Reutilização de código entre classes.<br>
+* **Polimorfismo:** Capacidade de um objeto se comportar de várias formas.<br>
