@@ -5,13 +5,9 @@ public class Seminario {
     private SeminarioAluno[] seminarioAlunos;
     private SeminarioLocal seminarioLocal;
 
-    public Seminario(String title) {
+    public Seminario(String title, SeminarioLocal seminarioLocal) {
         this.title = title;
-    }
-
-    public Seminario(String title, SeminarioAluno[] seminarioAlunos) {
-        this.title = title;
-        this.seminarioAlunos = seminarioAlunos;
+        this.seminarioLocal = seminarioLocal;
     }
 
     public Seminario(String title, SeminarioAluno[] seminarioAlunos, SeminarioLocal seminarioLocal) {
