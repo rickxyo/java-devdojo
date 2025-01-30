@@ -1,9 +1,9 @@
 package academy.devdojo.javadevdojo.javacore.Hheranca.dominio;
 
 public class Pessoa {
-    private String name;
-    private String cpf;
-    private Endereco endereco;
+    protected String name;
+    protected String cpf;
+    protected Endereco endereco;
 
     public void imprime() {
         System.out.println(this.name);
