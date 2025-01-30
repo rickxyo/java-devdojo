@@ -3,6 +3,10 @@ package academy.devdojo.javadevdojo.javacore.Hheranca.dominio;
 public class Funcionario extends Pessoa {
     private double salario;
 
+    public Funcionario(String name){
+        super(name);
+    }
+
     public void imprime() {
         super.imprime();
         System.out.println(this.salario);
