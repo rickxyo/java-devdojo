@@ -1,6 +1,6 @@
 package academy.devdojo.javadevdojo.javacore.Isobrescrita.dominio;
 
-public class Anime extends Object {
+public class Anime {
     private String name;
 
     @Override
