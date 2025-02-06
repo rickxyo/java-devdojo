@@ -1,5 +1,7 @@
 package academy.devdojo.javadevdojo.javacore.Npolimorfismo.dominio;
 
+//polimorfismo = trocar o TIPO da variavel de referencia mas ainda continuar utilizando outros objetos (ProdutoTest2)
+
 public abstract class Produto implements Taxavel{
     protected String nome;
     protected double valor;
