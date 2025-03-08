@@ -15,8 +15,8 @@ public class ExceptionTest2 {
             System.out.println("Arquivo criado " + isCriado);
         } catch (IOException e) {
             e.printStackTrace();
-            throw new RuntimeException("Problema na hora de cirar o arquivo;");
-            //throw e;
+            throw e;
+            //throw new RuntimeException("Problema na hora de cirar o arquivo;");
         }
 
     }
