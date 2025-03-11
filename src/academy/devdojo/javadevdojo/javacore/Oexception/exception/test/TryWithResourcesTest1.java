@@ -24,7 +24,7 @@ public class TryWithResourcesTest1 {
         try {
             reader = new BufferedReader(new FileReader("test.txt"));
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } finally {
             try {
                 if (reader != null)
