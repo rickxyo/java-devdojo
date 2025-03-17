@@ -1,5 +1,6 @@
 package academy.devdojo.javadevdojo.javacore.Sformatacao.test;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -8,5 +9,10 @@ public class SimpleDateFormatTest1 {
         String pattern = "'Amsterdam' dd 'de' MMMM 'de' yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
         System.out.println(sdf.format(new Date()));
+        try {
+            System.out.println(sdf.parse("Amsterdam 17 de março de 2025"));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 }
