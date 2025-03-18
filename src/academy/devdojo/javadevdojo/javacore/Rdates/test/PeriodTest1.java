@@ -2,6 +2,7 @@ package academy.devdojo.javadevdojo.javacore.Rdates.test;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 
 public class PeriodTest1 {
     public static void main(String[] args) {
@@ -18,6 +19,8 @@ public class PeriodTest1 {
         System.out.println(p4);
         System.out.println(p5);
         System.out.println(p3.getMonths());
-        System.out.println(Period.between(LocalDate.now(), LocalDate.now().plusDays(p3.getDays())));
+        System.out.println(Period.between(now, now.plusDays(p3.getDays())));
+        System.out.println(now.until(now.plusDays(p3.getDays()), ChronoUnit.MONTHS));
+
     }
 }
