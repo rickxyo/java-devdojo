@@ -25,6 +25,5 @@ public class DosFileAttributesTest1 {
         System.out.println(fileAttributeView.readAttributes().isHidden());
         System.out.println(fileAttributeView.readAttributes().isReadOnly());
 
-
     }
 }
