@@ -1,17 +1,45 @@
 package academy.devdojo.javadevdojo.javacore.Xserializacao.dominio;
 
-import java.io.Serializable;
+import java.io.*;
 
 // AVISANDO QUE O OBJETO É SERIALIZAVEL, AO CONTRARIO TEMOS "NotSerializableException"
 public class Aluno implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 7493406789596589206L;
     private Long id;
     private String nome;
-    private String password;
+
+    //"TRANSIENT" FAZ O DADO NÃO APARECER NA SERIALIZACAO, NESSE CASO APLICANDO NA SENHA QUE SERIA UM DADO SENSIVEL
+    private transient String password;
+    private transient Turma turma;
 
     public Aluno(Long id, String nome, String password) {
         this.id = id;
         this.nome = nome;
         this.password = password;
+    }
+
+    @Serial
+    private void writeObject(ObjectOutputStream oos) {
+        try {
+            oos.defaultWriteObject();
+            oos.writeUTF(turma.getNome());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Serial
+    private void readObject(ObjectInputStream ois) {
+        try {
+            ois.defaultReadObject();
+            String nomeTurma = ois.readUTF();
+            turma = new Turma(nomeTurma);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -20,7 +48,16 @@ public class Aluno implements Serializable {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", password='" + password + '\'' +
+                ", Turma='" + turma + '\'' +
                 '}';
+    }
+
+    public Turma getTurma() {
+        return turma;
+    }
+
+    public void setTurma(Turma turma) {
+        this.turma = turma;
     }
 
     public Long getId() {
