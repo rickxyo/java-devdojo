@@ -5,9 +5,14 @@ import java.util.List;
 
 public class ListTest01 {
     public static void main(String[] args) {
-        List<String> nomes = new ArrayList<>();
+        List<String> nomes = new ArrayList<>(16);
+        List<String> nomes2 = new ArrayList<>(16);
         nomes.add("Pedro");
         nomes.add("Sarah");
+        nomes2.add("Mansur");
+        nomes2.add("Oldoni");
+
+        nomes.addAll(nomes2); // JUNTA AS 2 LISTAS
 
         for (String nome : nomes) {
             System.out.println(nome);
@@ -15,8 +20,12 @@ public class ListTest01 {
 
         System.out.println("------------");
 
-        for (int i = 0; i < nomes.size(); i++) {
+        int size = nomes.size();
+        for (int i = 0; i < size; i++) {
             System.out.println(nomes.get(i));
         }
+
+        List<Integer> numeros = new ArrayList<>();
+        numeros.add(1);
     }
 }
