@@ -9,6 +9,8 @@ public class Smartphone {
         this.marca = marca;
     }
 
+
+
     // reflexivo: x.equals(x) tem que ser TRUE para tudo que for diferente de null
     // simétrico: para x e y diferentes de NULL, se x.equals(y) == true logo, y.equals(x) == true
     // transitividade: para x, y, z diferentes de null, se x.equals(y) == true, e x.equals(z0 == true logo, y.equals(z) == true
@@ -31,6 +33,14 @@ public class Smartphone {
     public int hashCode() {
         //hashcode = NUMERO QUE SERÁ GERADO, DE PREFERÊNCIA UNICO
         return serialNumber == null ? 0: this.serialNumber.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", marca='" + marca + '\'' +
+                '}';
     }
 
     public String getSerialNumber() {
