@@ -19,6 +19,7 @@ public class ListaArrayConversaoTest1 {
         numerosArray[0] = 1;
         numerosArray[1] = 2;
         numerosArray[2] = 3;
+
         List<Integer> arrayToList = Arrays.asList(numerosArray);
         System.out.println(Arrays.toString(numerosArray));
         System.out.println(arrayToList);
