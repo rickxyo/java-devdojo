@@ -4,11 +4,14 @@ import academy.devdojo.javadevdojo.javacore.Ycolecoes.dominio.Manga;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class IteratorTest1 {
     public static void main(String[] args) {
-        List<Manga> mangas = new ArrayList<>(6);
+//        List<Manga> mangas = new ArrayList<>(6);
+        //PARA REMOÇÃO "LinkedList" É MELHOR, POIS ELE É UM ARRAY QUE SABE A POSICÃO ANTERIOR E POSTERIOR
+        List<Manga> mangas = new LinkedList<>();
         mangas.add(new Manga(5L, "One Piece", 19.9, 0));
         mangas.add(new Manga(1L, "Berserk", 9.5, 5));
         mangas.add(new Manga(4L, "Hellsing Ultimate", 3.2, 2));
