@@ -21,7 +21,7 @@ public class StreamTest7 {
 
         System.out.println("-------------------");
 
-
+        // x é maior que y ou x? retorna y = 6
         integers.stream().reduce((x, y) -> x > y ? x : y).ifPresent(System.out::println);
         integers.stream().reduce(Integer::max).ifPresent(System.out::println);
     }
