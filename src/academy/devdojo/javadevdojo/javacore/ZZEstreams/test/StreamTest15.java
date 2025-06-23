@@ -21,7 +21,7 @@ public class StreamTest15 {
     ));
 
     public static void main(String[] args) {
-        //ESTATISCAS DE CADA CATEGORIA
+        //ESTATISTICAS DE CADA CATEGORIA
         Map<Category, DoubleSummaryStatistics> collect = lightNovels.stream()
                 .collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.summarizingDouble(LightNovel::getPrice)));
         System.out.println(collect);
