@@ -1,13 +1,22 @@
 package academy.devdojo.javadevdojo.javacore.ZZGconcorrencia.test;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
-class Counter{
+class Counter {
     private int count;
     private AtomicInteger atomicInteger = new AtomicInteger();
-    void increment(){
-        count++;
-        atomicInteger.incrementAndGet();
+    private Lock lock = new ReentrantLock(true);
+    void increment() {
+        lock.lock();
+        try {
+            count++;
+            atomicInteger.incrementAndGet();
+        } finally {
+            lock.unlock();
+        }
+
     }
 
     public int getCount() {
@@ -18,6 +27,7 @@ class Counter{
         return atomicInteger;
     }
 }
+
 public class AtomicIntegerTest1 {
     public static void main(String[] args) throws InterruptedException {
         Counter counter = new Counter();
