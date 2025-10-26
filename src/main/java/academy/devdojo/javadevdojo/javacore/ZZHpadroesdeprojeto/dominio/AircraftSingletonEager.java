@@ -1,4 +1,4 @@
-package academy.devdojo.javadevdojo.javacore.ZZpadroesdeprojeto.dominio;
+package academy.devdojo.javadevdojo.javacore.ZZHpadroesdeprojeto.dominio;
 
 import java.util.HashSet;
 import java.util.Set;

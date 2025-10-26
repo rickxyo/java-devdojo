@@ -1,4 +1,4 @@
-package academy.devdojo.javadevdojo.javacore.ZZpadroesdeprojeto.dominio;
+package academy.devdojo.javadevdojo.javacore.ZZHpadroesdeprojeto.dominio;
 
 public interface Currency {
     String getSymbol();

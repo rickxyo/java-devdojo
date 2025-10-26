@@ -1,6 +1,6 @@
-package academy.devdojo.javadevdojo.javacore.ZZpadroesdeprojeto.test;
+package academy.devdojo.javadevdojo.javacore.ZZHpadroesdeprojeto.test;
 
-import academy.devdojo.javadevdojo.javacore.ZZpadroesdeprojeto.dominio.AircraftSingletonLazy;
+import academy.devdojo.javadevdojo.javacore.ZZHpadroesdeprojeto.dominio.AircraftSingletonLazy;
 
 public class AircraftSingletonLazyTest1 {
     public static void main(String[] args) {

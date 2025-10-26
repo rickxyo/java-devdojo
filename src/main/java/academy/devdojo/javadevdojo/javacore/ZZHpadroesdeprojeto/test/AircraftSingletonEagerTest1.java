@@ -1,7 +1,6 @@
-package academy.devdojo.javadevdojo.javacore.ZZpadroesdeprojeto.test;
+package academy.devdojo.javadevdojo.javacore.ZZHpadroesdeprojeto.test;
 
-import academy.devdojo.javadevdojo.javacore.ZZpadroesdeprojeto.dominio.Aircraft;
-import academy.devdojo.javadevdojo.javacore.ZZpadroesdeprojeto.dominio.AircraftSingletonEager;
+import academy.devdojo.javadevdojo.javacore.ZZHpadroesdeprojeto.dominio.AircraftSingletonEager;
 
 public class AircraftSingletonEagerTest1 {
     public static void main(String[] args) {
