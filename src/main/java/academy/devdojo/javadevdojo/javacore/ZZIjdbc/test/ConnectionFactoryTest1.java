@@ -21,7 +21,8 @@ public class ConnectionFactoryTest1 {
 //        log.info("Producers found '{}' ", producers);
 //        ProducerService.showProducerMetaData();
 //        ProducerService.showDriverMetaData();
-        ProducerService.showTypeScrollWorking();
-
+//        ProducerService.showTypeScrollWorking();
+        List<Producer> producers = ProducerService.findByNameAndUpdateToUpperCase("Deen");
+        log.info("Producers found '{}' ", producers);
     }
 }
