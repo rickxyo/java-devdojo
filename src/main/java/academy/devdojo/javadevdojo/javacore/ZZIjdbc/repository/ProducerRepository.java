@@ -49,7 +49,30 @@ public class ProducerRepository {
 
     public static List<Producer> findAll() {
         log.info("Findind all Producers");
-        String sql = "SELECT id, name FROM anime_store.producer;";
+        return findByName("");
+//        String sql = "SELECT id, name FROM anime_store.producer;";
+//        List<Producer> producers = new ArrayList<>();
+//        try (Connection coonn = ConnectionFactory.getConnection();
+//             Statement stmt = coonn.createStatement();
+//             ResultSet rs = stmt.executeQuery(sql)) {
+//            while (rs.next()) {
+//                Producer producer = Producer
+//                        .builder()
+//                        .id(rs.getInt("id"))
+//                        .name(rs.getString("name"))
+//                        .build();
+//                producers.add(producer);
+//            }
+//        } catch (SQLException e) {
+//            log.error("Error while trying to find all producers", e);
+//        }
+//        return producers;
+    }
+
+    public static List<Producer> findByName(String name) {
+        log.info("Findind Producer by name");
+        String sql = "SELECT * FROM anime_store.producer where name like '%%%s%%';"
+                .formatted(name);
         List<Producer> producers = new ArrayList<>();
         try (Connection coonn = ConnectionFactory.getConnection();
              Statement stmt = coonn.createStatement();
