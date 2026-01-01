@@ -109,4 +109,31 @@ public class ProducerRepository {
         }
     }
 
+    public static void showDriverMetaData(){
+        log.info("Showing Driver Metadata");
+        try (Connection coonn = ConnectionFactory.getConnection()) {
+            DatabaseMetaData dbmetaData = coonn.getMetaData();
+            if (dbmetaData.supportsResultSetType(ResultSet.TYPE_FORWARD_ONLY)){
+                log.info("Supports TYPE_FORWARD_ONLY");
+                if (dbmetaData.supportsResultSetConcurrency(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE)){
+                    log.info("And Supoorts CONCUR_UPDATABLE");
+                }
+            }
+            if (dbmetaData.supportsResultSetType(ResultSet.TYPE_SCROLL_INSENSITIVE)){
+                log.info("Supports TYPE_SCROLL_INSENSITIVE");
+                if (dbmetaData.supportsResultSetConcurrency(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
+                    log.info("And Supoorts CONCUR_UPDATABLE");
+                }
+            }
+            if (dbmetaData.supportsResultSetType(ResultSet.TYPE_SCROLL_SENSITIVE)){
+                log.info("Supports TYPE_SCROLL_SENSITIVE");
+                if (dbmetaData.supportsResultSetConcurrency(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)){
+                    log.info("And Supoorts CONCUR_UPDATABLE");
+                }
+            }
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+        }
+    }
+
 }
